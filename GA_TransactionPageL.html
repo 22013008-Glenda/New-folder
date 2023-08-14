@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMeRich</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body {
+            background-color: rgb(221, 242, 249);
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid;
+            text-align: center;
+            border-collapse: collapse;
+
+        }
+
+        td {
+            font-size: x-large;
+        }
+
+
+        img {
+            height: 80px;
+            width: 100px;
+            padding-left: 25px;
+            padding-right: 25px;
+
+        }
+
+        .BCalc td {
+            text-align: left;
+            padding-top: 30px;
+            font-size: x-large;
+
+        }
+
+        .BCalc table {
+            width: 700px;
+            background-color: white;
+            margin-left: 25px;
+            margin-top: 10px;
+
+
+        }
+
+
+        .BCalc {
+            padding-top: 20px;
+            padding-bottom: 20px
+        }
+
+
+        .PCalc td {
+            text-align: left;
+            padding-top: 30px;
+            font-size: x-large;
+        }
+
+
+        .PCalc table {
+            width: 700px;
+            background-color: white;
+            margin-left: 25px;
+            margin-top: 10px;
+
+
+        }
+        
+
+        .option1 {
+            display:flex;
+            flex-wrap: nowrap;
+            margin-left: 500px;
+            margin-top: -45px;
+            font-size: large;
+        }
+        .optionclass{
+            margin-top: -20px;
+        }
+
+
+        button {
+            background-color: white;
+            color: black;
+            border: 1px solid #f6f6f6;
+            border-radius: 5%;
+            width: 200px;
+            height: 60px;
+            text-align: center;
+            border-color: black;
+            width:200px;
+            font-size: larger;
+        }
+        button p{
+            font-size: larger;
+            margin-top: 14px;
+        }
+
+        button:hover {
+            background-color: #008CBA;
+            color: white;
+           
+        }
+
+
+        button.calcAmt1 {
+            display:flex;
+            flex-wrap: nowrap;
+            margin-left: 550px;
+            top: 560px;
+            height: 40px;
+            width:130px;
+            text-align: center;
+           margin-top: -30px;
+        }
+        .next button{
+            margin-top: -5px;
+        }
+
+        p {
+            font-size: x-large;
+        }
+        table{
+            margin-top: -15px;
+        }
+        .buttonclass{
+            margin-top: -30px;
+        }
+        .form{
+            display: flex;
+            flex-wrap: nowrap;
+            margin-left: 500px;
+            margin-top: -60px;
+            font-size: large;
+        }
+        .formclass{
+            margin-top: -30px;
+        }
+        .optionclass{
+            margin-top: -30px;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <h1>Loan</h1>
+
+
+    <table>
+        <tr>
+            <th>
+                <h2>Why apply for Business Loan?</h2>
+            </th>
+            <th>
+                <h2>Why apply for Personal Loan?</h2>
+            </th>
+        </tr>
+        <tr>
+            <td>Increase efficiency <span style='font-size:50px; '>&#8594; </span> allows business plans to go smoothly
+                without worrying</td>
+            <td>Debt <span style='font-size:50px; '>&#8594; </span> To pay off debts owned</td>
+        </tr>
+        <tr>
+            <td>Prepare for unexpected occasions <span style='font-size:50px; '>&#8594; </span> Be financially prepared
+                for unexpected occasions</td>
+            <td>Emergency Money <span style='font-size:50px; '>&#8594; </span> To help with medical bills, insurance as
+                well as large purchases</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="BCalc">
+                    <b>Amount calculator (Estimated)</b>
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="formclass"><p>Loan Amount
+                                <div class="form">
+                                    <form action="GA_homepage3.html">
+                                        
+                                            <label for="amount">Enter Amount:</label>
+                                            <input type="text" name="amount" id="lamount2" placeholder="$1000.00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required
+                                            maxlength="5">
+                                        
+                                    </form>
+                                </div></p></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="optionclass"><p>Loan years
+                                <div class="option1">
+                                    <label for="lyear2">Select Loan Years:</label>
+                                    <select id="lyear2" name="selection">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div></p></div>
+                            </td>
+                        </tr>
+
+
+                        <td>
+                            <div class="buttonclass">
+                            <p id="userInput">Total amount paid per month:
+                            <button class="calcAmt1" onclick="calcAmt()">Confirm</p></button></div>
+                        </td>
+
+                </div>
+
+    </table>
+    <br>
+
+    <div class="next"> <a href="GA_TransactionPageL2.html"><button><b>
+                    next</b></button></a>
+    </div>
+
+    </td>
+
+    <td>
+        <div class="PCalc">
+            <b>Amount calculator (Estimated)</b>
+            <table>
+                <tr>
+                    <td><div class="formclass"><p>Loan Amount
+                        <div class="form">
+                            <form action="GA_homepage3.html">
+                             
+                                    <label for="amount">Enter Amount:</label>
+                                    <input type="text" name="amount" id="lamount1" placeholder="$1000.00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required
+                                    maxlength="5">
+                                
+
+                            </form>
+                        </div></p> </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <div class="optionclass"><p>Loan years
+                        <div class="option1">
+                            <label for="lyear1">Select Loan Years:</label>
+                            <select id="lyear1" name="selection">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div></p></div>
+                    </td>
+                </tr>
+                
+                    <td>
+                        <div class="buttonclass">
+                        <p id="userInput1">Total amount paid per month:
+                        <button class="calcAmt1" onclick="calcAmt1()">Confirm</button></p></div>
+                    </td>
+               
+
+
+
+
+        </div>
+        </table>
+        <br>
+
+        <div class="next"> <a href="GA_TransactionPageL2.html"><button><b>
+                        next</b></button></a>
+        </div>
+
+    </td>
+    </tr>
+
+    </table>
+    <script>
+        function calcAmt() {
+            var userInput = parseFloat(document.getElementById("lamount2").value);
+            var InputYear = parseFloat(document.getElementById("lyear2").value);
+            var total = (userInput / InputYear) * (4.38 / 100);
+            var modifiedText = "Total amount paid per month: $" + total.toFixed(2);
+            document.getElementById("userInput").textContent = modifiedText;
+        }
+        function calcAmt1() {
+            var userInput = parseFloat(document.getElementById("lamount1").value);
+            var InputYear = parseFloat(document.getElementById("lyear1").value);
+            var total = (userInput / InputYear) * (3.38 / 100);
+            var modifiedText = "Total amount paid per month: $" + total.toFixed(2);
+            document.getElementById("userInput1").textContent = modifiedText;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

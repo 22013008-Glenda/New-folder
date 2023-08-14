@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMeRich</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body {
+            background-color: rgb(221, 242, 249);
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        .send p {
+            font-size: large;
+            text-align: left;
+        }
+
+        .send :placeholder-shown {
+            text-align: center;
+            font-size: large;
+        }
+
+        .send {
+            margin-top: 270px;
+            margin-left: 300px;
+
+        }
+
+        .send input {
+            width: 300px;
+            height: 50px
+        }
+
+        .original {
+            width: 150px;
+            height: 50px;
+            padding: 50px;
+            border: 1px solid;
+            text-align: center;
+            background-color: white;
+            font-size: medium;
+            border-radius: 95%;
+            margin-top: -150px;
+            font-size: x-large;
+            margin-left: 340px;
+        }
+
+        .convert p {
+            margin-top: -2px;
+        }
+
+        .convert {
+            width: 150px;
+            height: 50px;
+            padding: 50px;
+            border: 1px solid;
+            text-align: center;
+            background-color: white;
+            font-size: medium;
+            border-radius: 95%;
+            font-size: x-large;
+            margin-left: 910px;
+            margin-top: -280px;
+        }
+
+        .original p {
+            margin-top: -1px;
+        }
+
+        button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            width: 200px;
+            height: 40px;
+
+        }
+
+        button p {
+            margin-top: -10px;
+        }
+
+
+
+        .form {
+            margin-left: 900px;
+            font-size: large;
+            margin-top: -10px;
+
+
+        }
+
+        .form input {
+            width: 300px;
+            height: 50px;
+
+        }
+
+        .buttons {
+            display: flex
+        }
+
+        .arrow img {
+            width: 200px;
+            margin-left: 660px;
+            margin-top: -100px;
+        }
+
+        .next button {
+            background-color: white;
+            color: black;
+            border: 2px solid #f6f6f6;
+            border-radius: 10%;
+            height: 90px;
+            margin-left: 375px;
+            margin-top: 135px;
+            border-color: black;
+        }
+
+        .next p {
+            font-size: larger;
+            margin-top: 14px;
+        }
+
+        .next button:hover {
+            background-color: #008CBA;
+            color: white;
+
+        }
+
+        .calc button {
+            background-color: white;
+            color: black;
+            border: 2px solid #f6f6f6;
+            border-radius: 10%;
+            height: 90px;
+            margin-top: 130px;
+            margin-left: 360px;
+            border-color: black;
+        }
+
+        .calc p {
+            font-size: larger;
+            margin-top: 14px;
+        }
+
+        .calc button:hover {
+            background-color: #008CBA;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <h1>REMITTANCE</h1>
+
+    <div class="send">
+        <p>Receiver Country:</p>
+        <input list="browsers" name="browser" placeholder="Country">
+        <datalist id="browsers">
+            <option id="indonesia" value="Indonesia">
+            <option id="india" value="India">
+            <option id="korea" value="Korea">
+        </datalist>
+    </div>
+
+
+    <div class="convert">
+        <p id="converted">Converted amount: </p>
+    </div>
+
+    <div class="original">
+        <p>1 SGD</p>
+    </div>
+
+    <div class="arrow"><img src="doubleArrow.png"></div>
+
+
+    <div class="form">
+
+
+        <p><label for="amount">Enter Amount:</label><br></p>
+        <input type="text" name="amount" id="lamount1" placeholder="$1000.00"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+    </div>
+
+    <div class="buttons">
+        <div class="calc">
+            <button onclick="currency()">
+                <p>convert</p>
+            </button>
+        </div>
+
+        <div class="next">
+            <a href="GA_TransactionPageR2.html"><button>
+                    <p>Next</p>
+                </button></a>
+        </div>
+
+    </div>
+
+    <script>
+
+        function currency() {
+            const country = document.querySelector('[name="browser"]').value.toLowerCase();
+            if (country == "indonesia") {
+                document.getElementById("converted").textContent = "0.00088Rupiah";
+            } else if (country == "india") {
+                document.getElementById("converted").textContent = "61.62Rupee";
+            } else if (country == "korea") {
+                document.getElementById("converted").textContent = "965.20Won";
+            }
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

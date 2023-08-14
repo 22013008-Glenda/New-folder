@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMeRich</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(221, 242, 249);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .col-lg-7 {
+            margin-top: 10%;
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="mt-5">
+                    <h1>LOG IN</h1>
+                </div>
+                <div class="mt-4">
+                    <h3>Scan QR code to link to SingPass</h3>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="https://www.singpass.gov.sg/home/ui/login">
+                        <img src="qrcode_www.singpass.gov.sg.png" alt="SingPass QR" width="300px">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="form mt-5">
+                    <form action="GA_homepage3.html">
+                        <label for="fname" class="form-label">User:</label>
+                        <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter NRIC"
+                            required>
+                        <br>
+
+                        <label for="fpwd" class="form-label">Password:</label>
+                        <input type="password" class="form-control" name="fpwd" id="fpwd" placeholder="Enter password"
+                            required>
+                </div><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

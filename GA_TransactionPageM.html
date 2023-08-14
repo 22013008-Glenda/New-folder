@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMeRich</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body {
+            background-color: rgb(221, 242, 249);
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .send input{
+            width:400px;
+            height: 80px;
+            text-align: center;
+            font-size: large;
+        }
+        .send p {
+            font-size: large;
+            text-align: left;
+        }
+        .send :placeholder-shown{
+            text-align: center;
+            font-size: large;
+        }
+        .send{
+            margin-top: 80px;
+            margin-left: 260px;
+        }
+        .form{
+            margin-top: -122px;
+            margin-left: 870px;
+        }
+        .form input{
+            width:400px;
+            height: 80px;
+            text-align: center;
+            font-size: large;
+        }
+        .form p {
+            font-size: large;
+            text-align: left;
+        }
+        .form :placeholder-shown{
+            text-align: center;
+            font-size: large;
+        }
+        table,
+        td,
+        th {
+            border: 2px solid;
+            text-align: center;
+            border-collapse: collapse;
+            font-size: x-large;
+            width: 400px;
+            height: 80px;
+            margin-left: 550px;
+            margin-top: 130px;
+        }
+        button {
+            background-color: white;
+            color: black;
+            border: 1px solid #f6f6f6;
+            border-radius: 5%;
+            height:60px;
+            text-align: center;
+            border-color: black;
+            width:150px;
+            font-size: large;
+            
+            font-size: medium;
+        }
+        button p{
+            font-size: larger;
+            margin-top: 14px;
+        }
+
+        button:hover {
+            background-color: #008CBA;
+            color: white;
+           
+        }
+        .confirm{
+            margin-left: 685px;
+            margin-top: -430px;
+        }
+        .tick img{
+            width:100px;
+            margin-top: 15px;
+        }
+        .tick {
+            margin-top: 100px;
+            margin-left: 450px;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <h1>MONEY TRANSFER</h1>
+
+    <div class="send">
+    <p>Send to:</p>
+    <input list="browsers" name="browser" placeholder="+65 97854563" required>
+    <datalist id="browsers">
+        <option value="+65 95421546
+        PayNow: ShaoZhe">
+        <option value="+65 84562456
+        PayNow: Loh Lydia">
+        <option value="+65 91234567
+        PayNow: Kristen Sng">
+        <option value="+65 82345678
+        PayNow: Glenda Teo">
+
+    </datalist>
+</div>
+
+<div class="form">
+    
+        <label for="amount">Enter amount: </label><br><br>
+        <input type="text" name="amount" id="amount" placeholder="$100.00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required
+        maxlength="5">
+        <br>
+        
+</div>
+
+<table>
+    <tr>
+        <td><b>Beware of Fraudulent activities!</b></td>
+    </tr>
+    <tr>
+        <td>Do not share sensitive information</td>
+    </tr>
+    <tr>
+        <td>Beware of online scams</td>
+    </tr>
+    <tr>
+        <td>Report suspicious activities!</td>
+    </tr>
+</table>
+
+
+
+<div class="confirm">
+<button id="confirm">Confirm</button>
+</div>
+
+<div class="tick"><img src="tick.png"><br>
+    <img src="tick.png"><br>
+    <img src="tick.png"></div>
+</div>
+<script>
+    function fileLink() {
+        window.location.href = "GA_ServiceDescription1.html";
+    }
+
+    document.getElementById("confirm").addEventListener("click", function () {
+        confirmMessage = "TRANSACTION COMPLETED!";
+        if (confirm(confirmMessage)) {
+            fileLink();
+        }
+    });
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMeRich</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            text-align: center;
+            font-size: large;
+        }
+        table,
+        td,
+        th {
+            border: 2px solid;
+            text-align: center;
+            border-collapse:collapse;
+            font-size: large;
+            margin-top: 50px;
+            height: 80px;
+        }
+        table{
+            width: 100px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body {
+            background-color: rgb(221, 242, 249);
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        
+
+        .Phone input,.Email input, .Reason input {
+            width: 600px;
+            height: 50px;
+            border: 2px solid;
+            margin-left: 20px;
+        }
+        button {
+            background-color: white;
+            color: black;
+            border: 1px solid #f6f6f6;
+            border-radius: 5%;
+            width: 150px;
+            height: 60px;
+            text-align: center;
+            border-color: black;
+            font-size: large;
+           
+        }
+        button p{
+            font-size: larger;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #008CBA;
+            color: white;
+           
+        }
+        table,
+        td,
+        th {
+            border: 2px solid;
+            text-align: center;
+            border-collapse: collapse;
+            font-size: large;
+            width: 300px;
+            height: 80px;
+           
+        }
+        .table{
+            
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4">Loan</h1>
+
+        <div class="row mt-3">
+            <div class="col-md-6 mx-auto">
+                <div class="Reason">
+                <div class="mb-3">
+                    <label for="reason" class="form-label">Enter reason for Loan:</label>
+                    <input type="text" class="form-control" id="reason" placeholder="E.g: To pay Medical Bills">
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="Email">
+                <div class="mb-3">
+                    <label for="Email" class="form-label">Email (optional)</label>
+                    <input type="text" class="form-control" id="Email" placeholder="ABC@Gmail.com">
+                </div>
+            </div>
+            </div>
+            <div class="col-md-6">
+                <div class="Phone">
+                <div class="mb-3">
+                    <label for="Phone" class="form-label">Phone (optional)</label>
+                    <input type="text" class="form-control" id="Phone" placeholder="+65 1234 5678">
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button id="confirm">Confirm</button>
+        </div>
+
+        <div class="table-responsive ">
+            <table class="table ">
+                    <tr>
+                        <td>Checking of Singpass</td>
+                    </tr>
+                    <tr>
+                        <td>Checking of IRAS bank statement</td>
+                    </tr>
+                    <tr>
+                        <td>Checking of profit and loss</td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function fileLink() {
+            window.location.href = "GA_ServiceDescription2.html";
+        }
+
+        document.getElementById("confirm").addEventListener("click", function () {
+            confirmMessage = "TRANSACTION COMPLETED!";
+            if (confirm(confirmMessage)) {
+                fileLink();
+            }
+        });
+    </script>
+</body>
+
+</html>

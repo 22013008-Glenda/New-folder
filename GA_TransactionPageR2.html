@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMeRich</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body {
+            background-color: rgb(221, 242, 249);
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        .head {
+            width: 300px;
+            height: 60px;
+            border: 1px solid;
+            font-size: x-large;
+            display: flex;
+            margin-left: 610px;
+            margin-top: -10px;
+            align-items: center;
+        }
+
+        .head p {
+            margin-left: 70px;
+
+        }
+
+        .collection td {
+            background-color: white;
+            border: 1px solid black;
+            width: 150px;
+            height: 50px;
+        }
+
+        .collection {
+            margin-left: 605px;
+            margin-top: 30px;
+        }
+
+
+        .table td {
+            background-color: white;
+            border: 1px solid black;
+            width: 1000px;
+            height: 50px;
+            text-align: center;
+            font-size: large;
+            border-collapse: collapse;
+        }
+
+        .table {
+            margin-top: 30px;
+            display: block;
+            width: 100%;
+            
+        }
+
+        .debit input {
+            width: 400px;
+            height: 30px
+        }
+
+        .short input {
+            height: 30px
+        }
+
+        button {
+            background-color: white;
+            color: black;
+            border: 1px solid #f6f6f6;
+            border-radius: 5%;
+            height:60px;
+            text-align: center;
+            margin-left: 680px;
+            margin-top: 20px;
+            border-color: black;
+            width:150px;
+            font-size: large;
+            
+            font-size: medium;
+        }
+        button p{
+            font-size: larger;
+            margin-top: 14px;
+        }
+
+        button:hover {
+            background-color: #008CBA;
+            color: white;
+           
+        }
+    </style>
+
+</head>
+
+<body>
+   
+
+    <h1>REMITTANCE</h1>
+
+    <div class="head">
+        <p>Choose an option</p>
+    </div>
+
+
+
+    <div class="collection">
+        <table>
+            <tr>
+                <p> Collection of receiver by: </p>
+                <td>
+                    <input type="radio" id="Collection" name="Collection" value="cash" required>
+                    <label for="Collection">By Cash</label>
+                    </form>
+                </td>
+                <td>
+                    <input type="radio" id="Collection" name="Collection" value="bank" required>
+                    <label for="Collection">By Bank</label>
+                    </form>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="collection">
+        <table>
+            <tr>
+                <p> Payment Method: </p>
+                <td>
+                    <input type="radio" id="method" name="method" value="PayNow" required>
+                    <label for="method">Bank Transfer</label>
+                    </form>
+                </td>
+                <td>
+                    <input type="radio" id="method" name="method" value="Debit/credit Card" required>
+                    <label for="method">Debit/credit Card</label>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <div>
+                    <td>
+                        fee: free
+                    </td>
+                    <td>
+                        fee: 2.55SGD
+                    </td>
+                </div>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="table">
+        <table>
+            <tr>
+                <td style="width: 50%;">
+                    <h4>Bank Transfer:<br></h4>
+                    1.sign in your Banking application<br>
+                    2. Transfer to MakeMeRich via PayNow: MakeMeRich
+
+                </td>
+                <td>
+                    <div class="debit">
+                        <h4>Debit/Credit Card</h4>
+                        <input type="text" name="fname" id="fname" placeholder="Card Holder Name" required>
+                        <br>
+
+                        <input type="text" name="number" id="number" placeholder="Card Number"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required
+                        maxlength="16">
+
+                        <br>
+                    </div>
+                    <div class="short">
+                        <input type="text" name="expiry" id="expiry" placeholder="MM/YY" required
+                        maxlength="5">
+                        <input type="text" name="cvv" id="cvv" placeholder="CVV" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required
+                        maxlength="4"> 
+                    </div>
+
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="confirm">
+        <button id="confirm">Confirm</button>
+    </div>
+
+    <script>
+        function fileLink() {
+            window.location.href = "GA_ServiceDescription1.html";
+        }
+
+        document.getElementById("confirm").addEventListener("click", function () {
+            confirmMessage = "TRANSACTION COMPLETED!";
+            if (confirm(confirmMessage)) {
+                fileLink();
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
